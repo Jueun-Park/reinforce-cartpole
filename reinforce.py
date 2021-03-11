@@ -86,7 +86,8 @@ class Reinforce:
         self.optimizer.step()
 
 if __name__ == "__main__":
+    torch.random.manual_seed(2021)
     import gym
     env = gym.make("CartPole-v1")
     agent = Reinforce(env)
-    agent.learn(10000)
+    agent.learn(2000)
